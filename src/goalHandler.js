@@ -1,6 +1,6 @@
 import FinancialGoal from './goalObject.js';
 import fs from 'fs';
-class goalHandler {
+export class goalHandler {
     constructor(filename = 'financialGoalData.json') {
         this.filename = filename
         this.goals = this.readFromFile();

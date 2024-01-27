@@ -1,4 +1,4 @@
-class FinancialGoal {
+export class FinancialGoal {
     constructor(goalAmount, savedAmount, url, name) {
         this.goalAmount = goalAmount;
         this.savedAmount = savedAmount;
