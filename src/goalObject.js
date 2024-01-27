@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-class goal {
+class goalObject {
     constructor(filename = 'financialGoalData.json') {
         this.filename = filename
     }
@@ -56,3 +56,4 @@ class goal {
     }
 }
 
+export default goalObject;
