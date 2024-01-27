@@ -1,35 +1,68 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 
-function App() {
-  const [count, setCount] = useState(0)
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import Container from '@mui/material/Container';
+// import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+// import Tooltip from '@mui/material/Tooltip';
+// import MenuItem from '@mui/material/MenuItem';
+// import AdbIcon from '@mui/icons-material/Adb';
+
+import './App.css'
+import {
+  BrowserRouter, Routes, Route, Link
+} from "react-router-dom"
+import SavingsTracker from "./SavingsTracker.jsx";
+
+export default function App() {
+  // const [anchorElNav, setAnchorElNav] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  // const handleOpenNavMenu = (event) => {
+  //   setAnchorElNav(event.currentTarget);
+  // };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
+
+  // const handleCloseNavMenu = () => {
+  //   setAnchorElNav(null);
+  // };
+
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <div>
+          <AppBar position="static">
+            <Toolbar>
+              <Typography color='inherit' as={Link} to="/" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NAVIGATION BAR
+              </Typography>
+              <Stack direction='row' spacing={2}>
+                <Button as={Link} to="/SavingsTracker" color='inherit'>Savings Tracker</Button>
+                <Button color='inherit'>some other page</Button>
+                <Button color='inherit'>some other page #2</Button>
+              </Stack>
+            </Toolbar>
+          </AppBar>
+          <div>
+            <Routes>
+              <Route path="/SavingsTracker" element={<SavingsTracker/>}/>
+            </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
     </>
-  )
+  );
 }
-
-export default App
