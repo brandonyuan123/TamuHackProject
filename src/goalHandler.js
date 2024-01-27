@@ -19,18 +19,14 @@ class goalHandler {
         }
     }
 
-    checkGoal(index) {
-        if (this.goals[index]) {
-            this.goals[index].checkUpdatedGoal();
-        } else {
-            console.log('Goal not found at index:', index);
+    getGoal(index) {
+        if (index < this.goals.length) {
+            return {goalData: this.goals[index].goalData}
         }
     }
 
-    listGoals() {
-        this.goals.forEach((goal, index) => {
-            console.log(`Goal ${index}:`, goal.goalData);
-        });
+    getAllGoals() {
+        return this.goals.map(goal => goal.goalData)
     }
 }
 

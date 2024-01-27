@@ -23,13 +23,6 @@ class goalObject {
         });
     }
 
-    checkUpdatedGoal() {
-        this.readFromFile(() => {
-            this.goalData.completed = this.goalData.savedAmount >= this.goalData.goalAmount;
-            this.writeToFile(true); // Update message
-        });
-    }
-
     readFromFile(callback) {
         fs.readFile(this.filename, 'utf8', (err, data) => {
             if (err) {
