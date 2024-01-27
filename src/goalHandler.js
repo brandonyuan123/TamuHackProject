@@ -31,7 +31,7 @@ class goalHandler {
 
     updateGoal(index, addedAmount) {
         if (index >= 0 && index < this.goals.length) {
-            this.goals[index].updateSavedAmount(addedAmount);
+            this.goals[index].savedAmount += addedAmount;
             this.writeToFile();
             return this.goals[index];
         } else {
@@ -49,6 +49,14 @@ class goalHandler {
 
     getAllGoals() {
         return this.goals;
+    }
+
+    getPercent(index) {
+        return this.goals[index].savedAmount / this.goals[index].goalAmount;
+    }
+
+    getGoalComplete(index) {
+        return this.goals[index].savedAmount >= this.goals[index].goalAmount;
     }
 }
 

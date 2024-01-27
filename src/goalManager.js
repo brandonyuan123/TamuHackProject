@@ -5,8 +5,11 @@ const goalManager = new goalHandler();
 goalManager.addGoal(400, 10, 'http://amazon.com', 'Graphics Card');
 goalManager.addGoal(200, 100, 'http://amazon.com', 'SSD');
 
-console.log("getting specific goals")
+goalManager.updateGoal(0, 200)
 console.log(goalManager.getGoal(0))
-console.log(goalManager.getGoal(1))
-console.log("now getting all goals")
-console.log(goalManager.getAllGoals())
+console.log(goalManager.getPercent(0))
+console.log(goalManager.getGoalComplete(0))
+goalManager.updateGoal(0, 400)
+console.log(goalManager.getGoal(0))
+console.log(goalManager.getPercent(0))
+console.log(goalManager.getGoalComplete(0))
