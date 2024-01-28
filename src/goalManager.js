@@ -10,6 +10,10 @@ export function addGoal(goalAmount, savedAmount, url, name) {
     goalManager.addGoal(goalAmount, savedAmount, url, name);
 }
 
+export function addToGoal(index, amount) {
+    goalManager.updateGoal(index, amount)
+}
+
 export function  getGoal(index) {
     return goalManager.getGoal(index)
 }

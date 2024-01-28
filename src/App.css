@@ -1,3 +1,11 @@
 .tmep {
   width: 100%;
 }
+
+.mainText {
+  color: #ffffff;
+  background-color: #1975d0;
+  box-shadow: 4px 4px;
+  padding: 30px;
+  margin: 20px;
+}

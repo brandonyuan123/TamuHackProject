@@ -51,8 +51,6 @@ export default function App() {
               </Typography>
               <Stack direction='row' spacing={2}>
                 <Button as={Link} to="/SavingsTracker" color='inherit'>Savings Tracker</Button>
-                <Button color='inherit'>some other page</Button>
-                <Button color='inherit'>some other page #2</Button>
               </Stack>
             </Toolbar>
           </AppBar>
@@ -60,6 +58,11 @@ export default function App() {
             <Routes>
               <Route path="/SavingsTracker" element={<SavingsTracker/>}/>
             </Routes>
+          </div>
+          <div className={"mainText"}>
+            <mainText>
+              Hello, this is our project please click savings tracker in the top right!
+            </mainText>
           </div>
         </div>
       </BrowserRouter>
