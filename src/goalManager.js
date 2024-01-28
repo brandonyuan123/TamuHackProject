@@ -18,6 +18,14 @@ export function getPercent(index) {
     return goalManager.getPercent(index)
 }
 
+export function getGoalComplete(index) {
+    return goalManager.getGoalComplete(index)
+}
+
+export function getAllGoals(){
+    return goalManager.getAllGoals();
+}
+
 /*
 goalManager.addGoal(400, 10, 'http://amazon.com', 'Graphics Card');
 goalManager.addGoal(200, 100, 'http://amazon.com', 'SSD');

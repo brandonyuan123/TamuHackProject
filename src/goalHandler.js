@@ -1,5 +1,6 @@
 import FinancialGoal from './goalObject.js';
 import fs from 'fs';
+import {getGoal} from "./goalManager.js";
 export class goalHandler {
     constructor(filename = 'financialGoalData.json') {
         this.filename = filename
@@ -48,7 +49,11 @@ export class goalHandler {
     }
 
     getAllGoals() {
-        return this.goals;
+        let allGoal = []
+        this.goals.forEach((item, index) => {
+            allGoal.push(getGoal(index))
+        });
+        return allGoal
     }
 
     getPercent(index) {
