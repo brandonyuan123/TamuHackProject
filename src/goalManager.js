@@ -3,7 +3,7 @@ import goalHandler from './goalHandler.js';
 let goalManager = null
 export function createHandler(){
     goalManager = new goalHandler();
-    //return goalManager;
+    return goalManager;
 }
 
 export function addGoal(goalAmount, savedAmount, url, name) {
@@ -11,7 +11,11 @@ export function addGoal(goalAmount, savedAmount, url, name) {
 }
 
 export function  getGoal(index) {
-    goalManager.getGoal(index)
+    return goalManager.getGoal(index)
+}
+
+export function getPercent(index) {
+    return goalManager.getPercent(index)
 }
 
 /*

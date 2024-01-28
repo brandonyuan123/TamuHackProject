@@ -41,7 +41,7 @@ export class goalHandler {
 
     getGoal(index) {
         if (index >= 0 && index < this.goals.length) {
-            return this.goals[index];
+            return [this.goals[index].goalAmount, this.goals[index].savedAmount, this.goals[index].url, this.goals[index].name];
         } else {
             throw new Error('Goal not found at index: ' + index);
         }
