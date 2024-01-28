@@ -3,12 +3,16 @@ import goalHandler from './goalHandler.js';
 let goalManager = null
 export function createHandler(){
     goalManager = new goalHandler();
+    //return goalManager;
 }
 
 export function addGoal(goalAmount, savedAmount, url, name) {
     goalManager.addGoal(goalAmount, savedAmount, url, name);
 }
 
+export function  getGoal(index) {
+    goalManager.getGoal(index)
+}
 
 /*
 goalManager.addGoal(400, 10, 'http://amazon.com', 'Graphics Card');
