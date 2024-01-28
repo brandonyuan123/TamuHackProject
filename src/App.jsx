@@ -47,7 +47,7 @@ export default function App() {
           <AppBar position="static">
             <Toolbar>
               <Typography color='inherit' as={Link} to="/" variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NAVIGATION BAR
+                GoalsTracker
               </Typography>
               <Stack direction='row' spacing={2}>
                 <Button as={Link} to="/SavingsTracker" color='inherit'>Savings Tracker</Button>
@@ -59,10 +59,20 @@ export default function App() {
               <Route path="/SavingsTracker" element={<SavingsTracker/>}/>
             </Routes>
           </div>
-          <div className={"mainText"}>
-            <mainText>
-              Hello, this is our project please click savings tracker in the top right!
-            </mainText>
+          <div className={"textBox"}>
+            <h1>Welcome to GoalsTracker!</h1>
+            <p>
+              This is our React-based web app where you can add your financial goals to track, 
+              where you can include a goal amount, current amount saved, URL to buy, and a product description. 
+              In our current example, you will see the user currently has multiple goals set up to purchase desktop components.
+            </p>
+            <div classname="textBox">
+              <h3>About us:</h3>
+              <p>
+                We are a hacking group of two, where this is both our first hackathon. Although not the most sophisticated project, we both learned much about web dev,
+                javascript, and version control through this project. This was a very cool opportunity, so thank you to TamuHack!
+              </p>
+            </div>
           </div>
         </div>
       </BrowserRouter>

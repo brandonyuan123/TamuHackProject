@@ -2,10 +2,13 @@
   width: 100%;
 }
 
-.mainText {
-  color: #ffffff;
-  background-color: #1975d0;
-  box-shadow: 4px 4px;
-  padding: 30px;
-  margin: 20px;
+.textBox {
+  color: #000000;
+  background-color: #dddddd;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.emptySpace {
+  margin: 0.5rem;
 }
