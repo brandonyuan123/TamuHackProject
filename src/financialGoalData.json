@@ -1,0 +1,38 @@
+[
+   {
+      "goalAmount": 400,
+      "savedAmount": 1810,
+      "url": "http://amazon.com",
+      "name": "Graphics Card"
+   },
+   {
+      "goalAmount": 200,
+      "savedAmount": 100,
+      "url": "http://amazon.com",
+      "name": "SSD"
+   },
+   {
+      "goalAmount": 400,
+      "savedAmount": 10,
+      "url": "http://amazon.com",
+      "name": "Graphics Card"
+   },
+   {
+      "goalAmount": 200,
+      "savedAmount": 100,
+      "url": "http://amazon.com",
+      "name": "SSD"
+   },
+   {
+      "goalAmount": 400,
+      "savedAmount": 10,
+      "url": "http://amazon.com",
+      "name": "Graphics Card"
+   },
+   {
+      "goalAmount": 200,
+      "savedAmount": 100,
+      "url": "http://amazon.com",
+      "name": "SSD"
+   }
+]
