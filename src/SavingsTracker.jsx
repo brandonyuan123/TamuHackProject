@@ -6,7 +6,17 @@ export default function SavingsTracker() {
     var goal = goalHandler.getGoal(0)
     return (
         <>
-            <h1>{goal}</h1>
+        <div>
+            <h1>Goals List:</h1>
+            <p>this is where all your goals will be etc etc</p>
+        </div>
+        <div>
+            <ul>
+                {goal.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
+        </div>
         </>
     );
 }
